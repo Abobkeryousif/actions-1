@@ -9,13 +9,12 @@ jobs:
             - name: pull repo code inside runner
               uses:  actions/checkout@v4
 
-            - name:  welcome message
-              run:   echo "simple and easy job"
-
-            - name: list files
-              run:  ls
+            - name:  Run Multiable command
+              run: |
+                echo "simple and easy job"
+                ls -ltra
+                cat README.md
+            - name: Generate ASCII Artwork
+              run:  cowsay -f dragon "Run for the cover, Im a dragon" >> dragon.txt
             
-            - name: return to home dirctory
-              run:  cd .. 
-           
         
