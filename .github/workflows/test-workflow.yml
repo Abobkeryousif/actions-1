@@ -6,6 +6,9 @@ jobs:
     first_job:
         runs-on:  ubuntu-latest
         steps:
+            - name: pull repo code inside runner
+              uses:  actions/checkout@v4
+
             - name:  welcome message
               run:   echo "simple and easy job"
 
@@ -14,10 +17,5 @@ jobs:
             
             - name: return to home dirctory
               run:  cd .. 
-            - name: return to home dirctory
-              run:  cd ..  
-
-            - name: read file
-              run:  cat README.md
-            
+           
         
