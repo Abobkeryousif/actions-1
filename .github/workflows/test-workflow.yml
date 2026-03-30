@@ -13,7 +13,7 @@ jobs:
               run:  ls
             
             - name: return to home dirctory
-              run:  cd ..
+              run:  cd .. cd ..
 
             - name: read file
               run:  cat README.md
