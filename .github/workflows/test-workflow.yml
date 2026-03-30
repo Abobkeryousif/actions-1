@@ -11,6 +11,9 @@ jobs:
 
             - name: list files
               run:  ls
+            
+            - name: return to home dirctory
+              run:  cd ..
 
             - name: read file
               run:  cat README.md
