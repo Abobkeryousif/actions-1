@@ -36,6 +36,7 @@ jobs:
   deploy_job_3:
     needs: test_job_2
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: download dragon file
         uses: actions/download-artifact@v5
